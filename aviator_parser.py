@@ -18,6 +18,7 @@ from datetime import datetime, timedelta
 
 from aviator_excel_writer import open_document, write_payout_info
 
+colorama_init()
 
 @dataclass
 class PayoutPlayer():
