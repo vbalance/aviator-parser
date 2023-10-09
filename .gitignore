@@ -1,0 +1,6 @@
+__pycache__
+analysis
+build
+test.py
+*.xlsx
+venv
