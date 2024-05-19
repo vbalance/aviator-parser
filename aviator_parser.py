@@ -82,11 +82,7 @@ def retrieve_last_payout_info(driver, last_payout_element, max_waiting_for_windo
     result = WebDriverWait(driver, timeout=5).until(lambda _: driver.find_element(By.XPATH, "/html/body/ngb-modal-window/div/div/app-fairness/div[2]/div/div/div[5]/div[6]/span"))
     result = float(result.get_attribute("textContent"))
 
-    time_str = WebDriverWait(driver, timeout=5).until(lambda _: driver.find_element(By.XPATH, "/html/body/ngb-modal-window/div/div/app-fairness/div[1]/div/div[2]"))
-    time_str_split = time_str.get_attribute("textContent").split(":")
-    dt_now = datetime.now()
-
-    dt = datetime(dt_now.year, dt_now.month, dt_now.day, int(time_str_split[0]), int(time_str_split[1]), int(time_str_split[2]))
+    dt = datetime.now()
 
     server_seed = WebDriverWait(driver, timeout=5).until(lambda _: driver.find_element(By.XPATH, "/html/body/ngb-modal-window/div/div/app-fairness/div[2]/div/div/div[1]/div[2]/input").get_attribute("value"))
 
