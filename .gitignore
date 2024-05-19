@@ -4,3 +4,4 @@ build
 test.py
 *.xlsx
 venv
+aviator_parser
